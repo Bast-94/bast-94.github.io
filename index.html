@@ -1,4 +1,199 @@
-<head></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Bastien Hoorelbeke</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+    header, section {
+      margin-bottom: 2rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .left-column {
+      flex: 1;
+      max-width: 25%;
+      padding-right: 1.5rem;
+      box-sizing: border-box;
+    }
+    .right-column {
+      flex: 3;
+      max-width: 75%;
+      box-sizing: border-box;
+    }
+    img.profile {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+    }
+    h1, h2, h3 {
+      margin: 0.2em 0;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.4em;
+      color: #0039AC;
+      border-bottom: 2px solid #2222FF;
+      padding-bottom: 0.2em;
+      margin-top: 1.5em;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #0039AC;
+      text-decoration: none;
+    }
+    .personal-info, .skills, .languages, .education, .certs, .interests {
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #eee;
+      color: #333;
+      border-radius: 4px;
+      padding: 0.2em 0.5em;
+      margin: 0.2em;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
 <body>
-Bastien Hoorelbeke
+
+<header>
+  <h1>Bastien Hoorelbeke</h1>
+  <p><strong>Diplômé de l'EPITA</strong></p>
+</header>
+
+<div class="container">
+
+  <aside class="left-column">
+    <img src="https://media.licdn.com/dms/image/v2/C4E03AQGlbJ8VM5MzXQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662469087103?e=1757548800&v=beta&t=s8bTodLZ0SiO5qxO2BCDvgwlA321tEgSKMIJ9559sKQ"> </img>
+
+
+    <div class="personal-info">
+      <h2>Contact</h2>
+      <p>Email : <a href="mailto:bastien.hoorelbeke@epita.fr">bastien.hoorelbeke@epita.fr</a></p>
+      <p>Téléphone </p>
+      <p>GitHub : <a href="https://github.com/Bast-94" target="_blank">Bast-94</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/in/bastien-hoorelbeke-01423b15b/" target="_blank">bastien-hoorelbeke</a></p>
+    </div>
+
+    <div class="skills">
+      <h2>Compétences Techniques</h2>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Torch</span>
+        <span class="tag">Tensorflow</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Numpy</span>
+        <span class="tag">C</span>
+        <span class="tag">C++</span>
+        <span class="tag">C#</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Scala</span>
+        <span class="tag">Java</span>
+        <span class="tag">SQL</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Redis</span>
+        <span class="tag">AWS</span>
+        <span class="tag">VueJS</span>
+        <span class="tag">Azure</span>
+      </div>
+    </div>
+
+    <div class="languages">
+      <h2>Langues</h2>
+      <p>Français : Natif</p>
+      <p>Anglais : Compétences professionnelles (TOEIC 860)</p>
+    </div>
+
+    <div class="education">
+      <h2>Formations</h2>
+      <p><strong>EPITA</strong>, Diplômé - 2024, Paris</p>
+      <p><strong>Lycée Fenelon la Trinité</strong>, Bac S - 2017, Lyon</p>
+    </div>
+
+    <div class="certs">
+      <h2>Diplômes</h2>
+      <ul>
+        <li>TOEIC (860)</li>
+        <li>PSC1</li>
+      </ul>
+    </div>
+
+    <div class="interests">
+      <h2>Centres d'intérêt</h2>
+      <ul>
+        <li>Course à pied</li>
+        <li>Cinéma</li>
+        <li>Musique</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="right-column">
+    <section>
+      <h2>À propos de moi</h2>
+      <p>Récemment diplômé de l'EPITA, je suis à la recherche d'un poste dans le domaine du Machine Learning, du Data Engineering ou du DevOps. N'hésitez pas à consulter la documentation de mes projets <a href="https://github.com/Bast-94" target="_blank">ici</a>.</p>
+    </section>
+
+    <section>
+      <h2>Expériences</h2>
+      <h3>Data Engineer - Nexaforward</h3>
+      <p><em>Mars - Avril 2025, Paris 10e</em></p>
+      <ul>
+        <li>Déploiement d'API et de plateformes conteneurisées (Docker) sur Azure.</li>
+        <li>Authentification via Keycloak sur FastAPI.</li>
+        <li>Workflows CI/CD.</li>
+        <li>Optimisation de la scalabilité et résilience.</li>
+      </ul>
+
+      <h3>DevOps - Radar</h3>
+      <p><em>Depuis Février 2024, Paris 16e</em></p>
+      <ul>
+        <li>Implémentation d'API (FastAPI) et services sur AWS ECS.</li>
+        <li>Réseau des services conteneurisés.</li>
+        <li>Développement du site vitrine (VueJS) et plateforme interne.</li>
+        <li>Recherche ML pour A/B testing + algorithmes Python (Numpy).</li>
+        <li>Scraping Python pour enrichir base AWS Neptune.</li>
+      </ul>
+
+      <h3>Développeur MLOps - Nexaforward</h3>
+      <p><em>Septembre 2022 - Janvier 2023, Paris 19e</em></p>
+      <ul>
+        <li>Déploiement d'algorithmes ML sur AWS ECS.</li>
+        <li>Automatisation avec Crontab.</li>
+        <li>Publication et obfuscation de librairies Python avec Pyarmor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projets</h2>
+      <ul>
+        <li><strong>Initiation aux réseaux de neurones :</strong> Classification d’images de navires avec Tensorflow.</li>
+        <li><strong>Python pour le Big Data :</strong> Analyse statistique sur l’évolution du Bitcoin.</li>
+        <li><strong>42sh :</strong> Réimplémentation de Bash en C.</li>
+        <li><strong>Fashion Scraping :</strong> Scraping de vêtements pour dataset Deep Learning.</li>
+      </ul>
+    </section>
+  </main>
+
+</div>
 </body>
+</html>
