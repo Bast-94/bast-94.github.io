@@ -90,7 +90,17 @@
       <p>GitHub : <a href="https://github.com/Bast-94" target="_blank">Bast-94</a></p>
       <p>LinkedIn : <a href="https://www.linkedin.com/in/bastien-hoorelbeke-01423b15b/" target="_blank">bastien-hoorelbeke</a></p>
     </div>
+    <script>
 
+      const randomNumber = Math.floor(Math.random() * 1000000000);
+      document.addEventListener('DOMContentLoaded', function() {
+        const randomPhoneNumber = `06 ${randomNumber.toString().slice(0, 2)} ${randomNumber.toString().slice(2, 4)} ${randomNumber.toString().slice(4, 6)} ${randomNumber.toString().slice(6, 8)}`;
+        const phoneElement = document.createElement('p');
+
+        phoneElement.textContent = `Téléphone : ${randomPhoneNumber}`;
+        document.querySelector('.personal-info').appendChild(phoneElement);
+      });
+    </script>
     <div class="skills">
       <h2>Compétences Techniques</h2>
       <div>
