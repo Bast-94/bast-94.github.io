@@ -13,9 +13,28 @@ const App = () => {
         <ContactInfo
           email="bastien.hoorelbeke@epita.fr"
           github="https://github.com/Bast-94"
-          linkedin="https://www.linkedin.com/in/bastien-hoorelbeke-01423b15b/"
+          linkedin="https://www.linkedin.com/in/bastien-hoorelbeke-01423b15b"
         />
-        <TagList tags={['Python', 'FastAPI', 'Torch', 'Tensorflow', 'C++', 'Docker', 'Azure']} />
+        <TagList tags={["Python",
+          "FastAPI",
+          "Torch",
+          "Tensorflow",
+          "Scikit-learn",
+          "Pandas",
+          "Numpy",
+          "C",
+          "C++",
+          "C#",
+          "JavaScript",
+          "Docker",
+          "Scala",
+          "Java",
+          "SQL",
+          "MongoDB",
+          "Redis",
+          "AWS",
+          "VueJS",
+          "Azure"]} />
         <InfoSection title="Langues" items={['Français : Natif', 'Anglais : Compétences professionnelles (TOEIC 860)']} />
         <InfoSection title="Diplômes" items={['TOEIC (860)', 'PSC1']} />
         <InfoSection title="Centres d’intérêt" items={['Course à pied', 'Cinéma', 'Musique']} />

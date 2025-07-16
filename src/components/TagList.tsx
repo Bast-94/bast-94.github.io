@@ -9,10 +9,13 @@ const TagList: React.FC<TagListProps> = ({ tags }) => (
     <h2>Compétences Techniques</h2>
     <div>
       {tags.map((tag, index) => (
-        <span key={index} className="tag">{tag}</span>
+        <span key={index} >
+          {tag}
+        </span>
       ))}
     </div>
   </div>
+
 );
 
 export default TagList;
