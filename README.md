@@ -1,4 +1,4 @@
-# Bastien Hoorelbeke Resume
+# Bastien Hoorelbeke Resume (available [here](https://bast-94.github.io))
 
 
 ## Install the project 
