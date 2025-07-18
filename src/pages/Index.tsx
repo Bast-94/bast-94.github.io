@@ -106,7 +106,9 @@ const Index = () => {
                 🎨 Mode couleur aléatoire activé
               </span>
             )}
-            CV généré avec React & TypeScript
+            CV généré avec React & TypeScript, le code est disponible sur <a href="https://github.com/Bast-94/bast-94.github.io"  className="block hover:underline text-primary"
+            target="_blank" rel="noopener noreferrer"  >
+             ce dépot git</a>
           </p>
         </footer>
       </div>
