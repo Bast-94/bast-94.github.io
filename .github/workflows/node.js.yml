@@ -32,4 +32,4 @@ jobs:
     - run: cp -r dist/* .
     - run: git add .
     - run: git commit -m "UPDATE version from dev"
-    - run: git push
+    - run: git push --set-upstream origin main
