@@ -9,14 +9,15 @@ import InfoSection from '../components/InfoSection';
 
 const Index = () => {
   const [randomColor, setRandomColor] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     // Vérifier si ?random_color est dans l'URL
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('dark_mode')) {
 
-      // add dark class to body
-      document.body.classList.add('dark');
+      // Activer le mode sombre
+      setDarkMode(true);
     }
     if (urlParams.has('random_color')) {
       setRandomColor(true);
@@ -34,10 +35,17 @@ const Index = () => {
         `${hue} 85% 65%`
       );
     }
+    if (darkMode) {
+      // Activer le mode sombre
+      document.body.classList.add('dark');
+    } else {
+      // Désactiver le mode sombre
+      document.body.classList.remove('dark');
+    }
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gradient-subtle" >
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Layout en deux colonnes */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

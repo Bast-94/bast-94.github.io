@@ -72,6 +72,7 @@ export const cvData: CVData = {
     "SQL",
     "MongoDB",
     "Redis",
+    "React",
     "AWS",
     "VueJS",
     "Azure"],
@@ -128,7 +129,7 @@ export const cvData: CVData = {
       id: "2",
       title: "Python Pour le Big Data",
       description: "Etude statistique  sur l'évolution du Bitcoin avec Pandas, Matplotlib et Numpy.",
-      technologies: ["Python","Pandas", "Matplotlib", "Numpy", "Jupyter"],
+      technologies: ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter"],
       link: "https://github.com/Bast-94/DefiEGC2024-RM-BH"
     },
     {
@@ -164,8 +165,7 @@ export const cvData: CVData = {
     title: "Formation",
     items: [
       "EPITA promotion 2024 - Ingénieur en Informatique",
-      "Licence Informatique - Université de Marseille (2017)",
-      "Certification AWS Solutions Architect (2021)"
+
     ]
   },
   interests: {
