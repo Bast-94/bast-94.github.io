@@ -122,14 +122,14 @@ export const cvData: CVData = {
       title: "Initiation aux réseaux de neurones",
       description: "Implémentation d'un réseau de neurones reconnaissant et classifiant des images de navires avec Tensorflow.",
       technologies: ["Python", "Tensorflow", "Jupyter"],
-      link: "https://github.com/alexandre-dupont/dashboard-analytics"
+      link: "https://github.com/Bast-94/IREN-BOATS"
     },
     {
       id: "2",
       title: "Python Pour le Big Data",
       description: "Etude statistique  sur l'évolution du Bitcoin avec Pandas, Matplotlib et Numpy.",
       technologies: ["Python","Pandas", "Matplotlib", "Numpy", "Jupyter"],
-      link: "https://github.com/alexandre-dupont/ecommerce-platform"
+      link: "https://github.com/Bast-94/DefiEGC2024-RM-BH"
     },
     {
       id: "3",
@@ -142,7 +142,15 @@ export const cvData: CVData = {
       title: "Fashion Scraping",
       description: "Projet de scraping de sites de mode en Python dans le but de créer un dataset d'images de vêtement pour un modèle de Deep Learning.",
       technologies: ["Python", "BeautifulSoup", "Requests", "Redis", "MongoDB", "Docker"],
-    }
+    },
+    {
+      id: "5",
+      title: "Fondements théoriques du Machine Learning",
+      description: "Projet collectif de mise en pratique des concepts théoriques du Machine Learning avec Scikit-learn ainsi que des bases mathématiques sous-jacentes.",
+      technologies: ["Python", "Numpy", "Scikit-learn", "Matplotlib", "Jupyter"],
+      link: "https://github.com/Bast-94/FTML-project"
+    },
+
   ],
   languages: {
     title: "Langues",
