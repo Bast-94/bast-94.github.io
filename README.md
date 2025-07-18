@@ -1,6 +1,7 @@
 # Bastien Hoorelbeke Resume
 
 
+## Install the project 
 
 **Use your preferred IDE**
 
@@ -33,4 +34,10 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Fill your experiences 
+
+- Go in [src/data/cvData.ts](https://github.com/Bast-94/bast-94.github.io/blob/main/src/data/cvData.ts)
+- Fill your own experiences, contact infos and skills.
+
 
