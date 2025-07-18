@@ -81,10 +81,10 @@ export const cvData: CVData = {
       id: "1",
       title: "Data Engineer",
       company: "Nexaforward",
-      period: "mars - avril 2025",
+      period: "Mars - Avril 2025",
       location: "Paris",
       missions: [
-        "éploiement d'API et de plateformes conteneurisées (Docker) sur le cloud Azure.",
+        "Déploiement d'API et de plateformes conteneurisées (Docker) sur le cloud Azure.",
         "Intégration d'une authentification via Keycloak sur les API (FastAPI).",
         "Mise en place de workflows CI/CD.",
         "Optimisation de la scalabilité et de la résilience des services déployés."
