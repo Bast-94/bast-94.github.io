@@ -176,12 +176,12 @@ export const cvData: CVData = {
       "Cinéma",
     ]
   },
-  certifications: {
+  /* certifications: {
     title: "Certifications",
     items: [
       "AWS Certified Solutions Architect",
       "Google Analytics Certified",
       "Scrum Master Certified"
     ]
-  }
+  } */
 };
