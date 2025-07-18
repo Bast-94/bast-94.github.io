@@ -106,7 +106,7 @@ export const cvData: CVData = {
     },
     {
       id: "3",
-      title: "Développeur Développeur MLOps",
+      title: "Développeur MLOps",
       company: "Nexaforward",
       period: "Septembre 2022 - Janvier 2023",
       location: "Paris",
@@ -176,12 +176,5 @@ export const cvData: CVData = {
       "Cinéma",
     ]
   },
-  /* certifications: {
-    title: "Certifications",
-    items: [
-      "AWS Certified Solutions Architect",
-      "Google Analytics Certified",
-      "Scrum Master Certified"
-    ]
-  } */
+
 };
