@@ -14,11 +14,7 @@ const Index = () => {
   useEffect(() => {
     // Vérifier si ?random_color est dans l'URL
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('dark_mode')) {
 
-      // Activer le mode sombre
-      setDarkMode(true);
-    }
     if (urlParams.has('random_color')) {
       setRandomColor(true);
       // Générer une couleur aléatoire et l'appliquer
@@ -37,16 +33,32 @@ const Index = () => {
     }
     if (darkMode) {
       // Activer le mode sombre
+      console.log('Activating dark mode');
       document.body.classList.add('dark');
     } else {
       // Désactiver le mode sombre
       document.body.classList.remove('dark');
     }
-  }, []);
+  }, [darkMode]);
 
   return (
+
     <div className="min-h-screen bg-gradient-subtle" >
+
       <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="fixed top-4 right-4 z-50 flex items-center space-x-3">
+          <span className="text-sm">{darkMode ? '🌙' : '☀️'}</span>
+          <button
+            onClick={() => setDarkMode((prev) => !prev)}
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'
+              }`}
+          >
+            <span
+              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${darkMode ? 'translate-x-6' : 'translate-x-1'
+                }`}
+            />
+          </button>
+        </div>
         {/* Layout en deux colonnes */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
