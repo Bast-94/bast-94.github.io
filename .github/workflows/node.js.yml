@@ -44,7 +44,16 @@ jobs:
       - name: Merge pre-main into main
         run: |
           git merge origin/pre-main --no-ff --commit -m "Auto-merge from pre-main to main" || git checkout pre-main -- .
-          git commit -m "Auto-merge from pre-main to main" || echo "No changes to commit"
+      - name: Moving assets to main
+        run: |
+          rm -rf assets
+          mv dist/* .
+      - name: Add changes to git
+        run: |
+          git add .
+      - name: Commit changes
+        run: |
+          git commit -m "update index.html" || echo "No changes to commit"
 
       - name: Push changes to main
         run: git push origin main
