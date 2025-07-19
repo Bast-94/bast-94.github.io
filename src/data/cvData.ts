@@ -172,6 +172,14 @@ export const cvData: CVData = {
       technologies: ["Python", "Torch", "Transformers", "Jupyter", "Pandas", "Numpy", "Scikit-learn"],
       link: "https://github.com/Bast-94/NLP-2023"
     },
+    {
+id: "9",
+      title: "Apprentissage par renforcement",
+      description: "Projet de reinforcement learning consistant à implémenter un agent capable de jouer au casse brique d'Atari.",
+      technologies: ["Python", "Torch", "Jupyter"],
+      
+link:"https://github.com/Bast-94/RL-DQN"
+    }
 
   ],
   languages: {
