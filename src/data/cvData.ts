@@ -160,9 +160,16 @@ export const cvData: CVData = {
     },
     {
       id: "7",
+      title: "Restaurant-Recommander-System",
+      description: "Implémentation d'un système de recommandation de restaurants à partir de jeux de données d'une application de livraison de plats cuisinés.",
+      technologies: ["Python", "Jupyter", "Pandas", "Numpy", "Scikit-learn", "Matplotlib", "PySpark"],
+      link: "https://github.com/Bast-94/Restaurant-Recommander-System"
+    },
+    {
+      id: "8",
       title: "Etude du traitement du langage naturel",
       description: "Séries de travaux pratiques sur les bases du traitement du langage naturel en python",
-      technologies: ["Python", "Torch", "Transformers",  "Jupyter", "Pandas", "Numpy","Scikit-learn"],
+      technologies: ["Python", "Torch", "Transformers", "Jupyter", "Pandas", "Numpy", "Scikit-learn"],
       link: "https://github.com/Bast-94/NLP-2023"
     },
 
