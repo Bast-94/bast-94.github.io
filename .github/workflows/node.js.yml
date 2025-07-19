@@ -43,8 +43,7 @@ jobs:
           git checkout main
       - name: Merge pre-main into main
         run: |
-          git checkout pre-main -- .  # Merge changes from pre-main to main
-          git merge origin/pre-main --no-ff --commit -m "Auto-merge from pre-main to main"
+          git merge origin/pre-main --no-ff --commit -m "Auto-merge from pre-main to main" || git checkout pre-main -- .
 
       - name: Push changes to main
         run: git push origin main
