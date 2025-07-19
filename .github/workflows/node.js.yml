@@ -38,9 +38,11 @@ jobs:
       - name: Fetch all branches
         run: git fetch origin
 
-      - name: Merge pre-main into main
+      - name: Checkout main branch
         run: |
           git checkout main
+      - name: Merge pre-main into main
+        run: |
           git checkout pre-main -- .  # Merge changes from pre-main to main
           git merge origin/pre-main --no-ff --commit -m "Auto-merge from pre-main to main"
 
