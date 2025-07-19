@@ -1,37 +1,47 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: Merge pre-main to main
 
 on:
   push:
     branches: [ "pre-main" ]
 
 jobs:
-  build:
-
+  merge-and-build:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [20.x,]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [20.x]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install
-    - run: npm run build --if-present
-    - run: git config --global user.name "github-actions"
-    - run: git config --global user.email "bh.69@live.fr"
-    - run: git fetch
-    - run: git switch main
-    - run: git merge origin/main && git checkout pre-main -- .
-    - run: cp -r dist/* .
-    - run: git add .
-    - run: git commit -m "UPDATE version from pre-main"
-    - run: git push --set-upstream origin main
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important pour faire des merges
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project (if applicable)
+        run: npm run build --if-present
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "bh.69@live.fr"
+
+      - name: Fetch all branches
+        run: git fetch origin
+
+      - name: Merge pre-main into main
+        run: |
+          git checkout main
+          git merge origin/pre-main --no-ff --commit -m "Auto-merge from pre-main to main"
+
+      - name: Push changes to main
+        run: git push origin main
