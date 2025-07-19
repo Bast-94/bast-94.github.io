@@ -30,7 +30,7 @@ jobs:
     - run: git config --global user.email "bastien.hoorelbeke@epita.fr"
     - run: git fetch
     - run: git checkout -b main
-    - run: git pull origin main || git checkout main -- .
+    - run: git pull 
     - run: cp -r dist/* .
     - run: git add .
     - run: git commit -m "UPDATE version from pre-main"
