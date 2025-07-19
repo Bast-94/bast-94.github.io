@@ -156,7 +156,14 @@ export const cvData: CVData = {
       title: "Very Large Graph",
       description: "Projet collectif de parallélisation et d'optimisation de calcul de clique maximale de graphe",
       technologies: ["Python", "Pyspark", "NetworkX", "Matplotlib", "Jupyter"],
-      link: "https://github.com/Bast-94/FTML-project"
+      link: "https://github.com/Bast-94/VLAG-PW"
+    },
+    {
+      id: "7",
+      title: "Etude du traitement du langage naturel",
+      description: "Séries de travaux pratiques sur les bases du traitement du langage naturel en python",
+      technologies: ["Python", "Torch", "Transformers",  "Jupyter", "Pandas", "Numpy","Scikit-learn"],
+      link: "https://github.com/Bast-94/NLP-2023"
     },
 
   ],
