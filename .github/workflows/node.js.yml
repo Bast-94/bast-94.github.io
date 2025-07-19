@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "pre-main" ]
 
 jobs:
   build:
@@ -32,5 +32,5 @@ jobs:
     - run: git pull origin main
     - run: cp -r dist/* .
     - run: git add .
-    - run: git commit -m "UPDATE version from dev"
+    - run: git commit -m "UPDATE version from pre-main"
     - run: git push --set-upstream origin main
