@@ -9,7 +9,7 @@ import InfoSection from '../components/InfoSection';
 
 const Index = () => {
   const [randomColor, setRandomColor] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     // Vérifier si ?random_color est dans l'URL
@@ -106,9 +106,7 @@ const Index = () => {
                 🎨 Mode couleur aléatoire activé
               </span>
             )}
-            CV généré avec React & TypeScript, le code est disponible sur <a href="https://github.com/Bast-94/bast-94.github.io"  className="block hover:underline text-primary"
-            target="_blank" rel="noopener noreferrer"  >
-             ce dépot git</a>
+            CV généré avec React & TypeScript
           </p>
         </footer>
       </div>

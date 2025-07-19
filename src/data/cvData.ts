@@ -151,6 +151,13 @@ export const cvData: CVData = {
       technologies: ["Python", "Numpy", "Scikit-learn", "Matplotlib", "Jupyter"],
       link: "https://github.com/Bast-94/FTML-project"
     },
+    {
+      id: "6",
+      title: "Very Large Graph",
+      description: "Projet collectif de parallélisation et d'optimisation de calcul de clique maximale de graphe",
+      technologies: ["Python", "Pyspark", "NetworkX", "Matplotlib", "Jupyter"],
+      link: "https://github.com/Bast-94/FTML-project"
+    },
 
   ],
   languages: {
