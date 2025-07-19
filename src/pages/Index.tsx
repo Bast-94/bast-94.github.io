@@ -9,7 +9,7 @@ import InfoSection from '../components/InfoSection';
 
 const Index = () => {
   const [randomColor, setRandomColor] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     // Vérifier si ?random_color est dans l'URL
