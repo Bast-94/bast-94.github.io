@@ -92,7 +92,7 @@ export const cvData: CVData = {
     },
     {
       id: "2",
-      title: "DevOps",
+      title: "DevOps/Data Engineer",
       company: "Radar",
       period: "Février 2024 - Février 2025",
       location: "Paris",
@@ -100,7 +100,7 @@ export const cvData: CVData = {
         "Déploiement et implémentation d'API (Python FastAPI) et de services conteneurisés sur AWS ECS.",
         "Gestion réseau des services conteneurisés dans le cloud AWS.",
         "Implémentation d'une première version du site de l'entreprise ainsi que d'une plateforme interne en Vue JS.",
-        "Recherche en Machine Learning sur l'usage de l'AB testing et création d'algorithme Python avec Numpy.",
+        "Recherche en Machine Learning sur l'usage de l'AB testing en algèbre linéaire et création d'algorithme Python avec Numpy.",
         "Implémentation de pipeline de scrapping en Python, dans le but d'enrichir une base de données en graphe sur AWS Neptune.",
       ]
     },
@@ -175,7 +175,7 @@ export const cvData: CVData = {
     {
 id: "9",
       title: "Apprentissage par renforcement",
-      description: "Projet de reinforcement learning consistant à implémenter un agent capable de jouer au casse brique d'Atari.",
+      description: "Projet de reinforcement learning consistant à implémenter un agent capable de jouer au casse-brique d'Atari.",
       technologies: ["Python", "Torch", "Jupyter"],
       
 link:"https://github.com/Bast-94/RL-DQN"
@@ -186,7 +186,7 @@ link:"https://github.com/Bast-94/RL-DQN"
     title: "Langues",
     items: [
       "Français (Natif)",
-      "Anglais ",
+      "Anglais TOEIC (860)",
 
     ]
   },
@@ -194,7 +194,6 @@ link:"https://github.com/Bast-94/RL-DQN"
     title: "Formation",
     items: [
       "EPITA promotion 2024 - Ingénieur en Informatique",
-
     ]
   },
   interests: {
