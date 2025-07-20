@@ -179,7 +179,13 @@ id: "9",
       technologies: ["Python", "Torch", "Jupyter"],
       
 link:"https://github.com/Bast-94/RL-DQN"
-    }
+    },{
+      id: "10",
+        title: "Ce CV que vous lisez",
+      description: "Implémentation de mon CV en React et Type script.",
+      technologies: ["React", "Typescript", "Github Pages"],
+      link: "https://github.com/Bast-94/NLP-2023"
+    },
 
   ],
   languages: {
