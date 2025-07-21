@@ -89,7 +89,7 @@ const Index = () => {
               </h2>
               <div className="space-y-6">
                 {cvData.experiences.map((experience) => (
-                  <Experience key={experience.id} experience={experience} showShortVersion={true}/>
+                  <Experience key={experience.id} experience={experience} showShortVersion={false}/>
                 ))}
               </div>
             </div>
