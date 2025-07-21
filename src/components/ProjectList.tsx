@@ -1,6 +1,5 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Code, Lightbulb } from 'lucide-react';
 import { Project } from '../data/cvData';
-import TagList from './TagList';
 
 interface ProjectListProps {
   projects: Project[];
@@ -10,61 +9,113 @@ const ProjectList = ({ projects }: ProjectListProps) => {
   if (projects.length === 0) return null;
 
   return (
-    <div className="bg-card rounded-lg p-6 shadow-soft border border-border">
-      <h2 className="text-xl font-bold text-card-foreground mb-6 border-b border-border pb-2">
-        Projets
-      </h2>
+    <section className="bg-card rounded-xl p-8 shadow-elegant border border-border/50 hover:shadow-2xl transition-shadow duration-500">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-2xl font-bold text-card-foreground bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+          Projets
+        </h2>
+        <div className="h-px bg-gradient-to-r from-primary/50 to-transparent flex-1 ml-6"></div>
+        <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+          <Code className="w-4 h-4 text-primary" />
+        </div>
+      </div>
       
-      <div className="space-y-6">
-        {projects.map((project) => (
-          <div key={project.id} className="group">
-            <div className="flex items-start justify-between mb-3">
-              <h3 className="text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="group relative bg-gradient-to-br from-background to-muted/20 rounded-lg p-6 border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+            style={{
+              animationDelay: `${index * 100}ms`
+            }}
+          >
+            {/* Project header */}
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <Lightbulb className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-card-foreground group-hover:text-primary transition-colors duration-300 line-clamp-1">
+                    {project.title}
+                  </h3>
+                </div>
+              </div>
               
               {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full hover:bg-muted transition-colors"
+                  className="p-2 rounded-full hover:bg-primary/10 transition-colors duration-200 opacity-0 group-hover:opacity-100"
                   aria-label={`Voir le projet ${project.title}`}
                 >
                   {project.link.includes('github') ? (
-                    <Github className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+                    <Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                   ) : (
-                    <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+                    <ExternalLink className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                   )}
                 </a>
               )}
             </div>
             
-            <p className="text-sm text-card-foreground leading-relaxed mb-4">
+            {/* Project description */}
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3 group-hover:text-card-foreground transition-colors duration-300">
               {project.description}
             </p>
             
+            {/* Technologies */}
             {project.technologies && project.technologies.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, index) => (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.slice(0, 4).map((tech, techIndex) => (
                   <span
-                    key={index}
-                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-secondary text-secondary-foreground border border-border"
+                    key={techIndex}
+                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors duration-200"
                   >
                     {tech}
                   </span>
                 ))}
+                {project.technologies.length > 4 && (
+                  <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground">
+                    +{project.technologies.length - 4}
+                  </span>
+                )}
               </div>
             )}
             
-            {/* Ligne de séparation sauf pour le dernier projet */}
-            {project.id !== projects[projects.length - 1].id && (
-              <div className="border-b border-border mt-6"></div>
+            {/* Project link indicator */}
+            {project.link && (
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-1 text-xs text-primary">
+                  <span>Voir le projet</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </div>
             )}
+            
+            {/* Hover gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg pointer-events-none"></div>
           </div>
         ))}
       </div>
-    </div>
+      
+      {/* Show all projects indicator */}
+      {projects.length > 6 && (
+        <div className="mt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            Et bien d'autres projets sur mon{' '}
+            <a 
+              href="https://github.com/Bast-94" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary-glow transition-colors font-medium"
+            >
+              GitHub
+            </a>
+          </p>
+        </div>
+      )}
+    </section>
   );
 };
 
