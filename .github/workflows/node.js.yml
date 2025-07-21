@@ -48,6 +48,7 @@ jobs:
           git add .
       - name: Commit changes
         run: |
+          git rm -rf last_commit_message.txt || echo "No last commit message file to remove"
           git commit -F last_commit_message.txt || echo "No changes to commit"
 
       - name: Push changes to main
