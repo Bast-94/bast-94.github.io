@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "bh.69@live.fr"
-          mkdir dist && git log -1 --pretty=%B > dist/last_commit_message.txt
+          mkdir -p dist && git log -1 --pretty=%B > dist/last_commit_message.txt
 
       - name: Fetch all branches
         run: git fetch origin
