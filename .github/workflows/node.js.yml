@@ -45,7 +45,9 @@ jobs:
       - name: Moving assets to main
         run: |
           rm -rf assets
-          mv dist/* .
+          mv dist/assets .
+          mv dist/last_commit_message.txt .
+          mv dist/index.html .
       - name: Add changes to git
         run: |
           git add .
