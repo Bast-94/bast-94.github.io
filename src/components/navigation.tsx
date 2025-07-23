@@ -39,7 +39,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="font-bold text-xl text-gray-900 dark:text-white">Portfolio</div>
+          <div className="font-bold text-xl text-gray-900 dark:text-white"></div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
