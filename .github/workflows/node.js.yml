@@ -28,7 +28,10 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "bh.69@live.fr"
+      - name: Create dist directory and save last commit message
+        run: |
           mkdir -p dist && git log -1 --pretty=%B > dist/last_commit_message.txt
+          test -f dist/last_commit_message.txt
 
       - name: Fetch all branches
         run: git fetch origin
@@ -42,7 +45,9 @@ jobs:
       - name: Moving assets to main
         run: |
           rm -rf assets
-          mv dist/* .
+          mv dist/assets .
+          mv dist/last_commit_message.txt .
+          mv dist/index.html .
       - name: Add changes to git
         run: |
           git add .
