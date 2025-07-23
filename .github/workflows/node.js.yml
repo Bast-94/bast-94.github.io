@@ -18,8 +18,6 @@ jobs:
         with:
           fetch-depth: 0  # Important pour faire des merges
 
-
-
       - name: Install dependencies
         run: npm install
 
@@ -30,7 +28,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "bh.69@live.fr"
-          git log -1 --pretty=%B > last_commit_message.txt
+          mkdir -p dist && git log -1 --pretty=%B > dist/last_commit_message.txt
 
       - name: Fetch all branches
         run: git fetch origin
@@ -48,9 +46,9 @@ jobs:
       - name: Add changes to git
         run: |
           git add .
-          git rm last_commit_message.txt || echo "No last commit message file to remove"
       - name: Commit changes
         run: |
+          git rm -rf last_commit_message.txt || echo "No last commit message file to remove"
           git commit -F last_commit_message.txt || echo "No changes to commit"
 
       - name: Push changes to main
