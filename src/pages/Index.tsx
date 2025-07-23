@@ -36,10 +36,8 @@ export default function CVPage() {
           {/* Contact Section */}
           <section id="contact" className="py-20 bg-black dark:bg-gray-900 text-white">
             <div className="max-w-4xl mx-auto px-6 text-center">
-              <h2 className="text-4xl font-bold mb-6">Travaillons ensemble</h2>
-              <p className="text-xl text-gray-300 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Vous avez un projet en tête ? N'hésitez pas à me contacter pour en discuter.
-              </p>
+
+
               <a
                 href={`mailto:${cvData.contact.email}`}
                 className="inline-block bg-accent text-white px-8 py-4 rounded-lg font-medium hover:bg-accent/90 transition-colors text-lg"
@@ -50,12 +48,8 @@ export default function CVPage() {
           </section>
         </main>
 
-        {/* Footer */}
-        <footer className="bg-black dark:bg-gray-900 text-gray-400 dark:text-gray-500 py-8 border-t border-gray-800 dark:border-gray-700">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <p>© 2024 {cvData.contact.name}. Tous droits réservés.</p>
-          </div>
-        </footer>
+
+
       </div>
     </ThemeProvider>
   )
