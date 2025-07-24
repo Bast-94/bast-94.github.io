@@ -25,7 +25,7 @@ export default function Hero({ contact }: HeroProps) {
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <p className="text-accent font-medium mb-2">Bonjour, je suis</p>
+        
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">{contact.name}</h1>
               <h2 className="text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-6">{contact.title}</h2>
             </div>
