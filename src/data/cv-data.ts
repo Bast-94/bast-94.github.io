@@ -9,7 +9,7 @@ export const cvData: CVData = {
     linkedin: "https://www.linkedin.com/in/bastien-hoorelbeke-01423b15b",
     github: "https://github.com/bast-94",
     location: "Paris, France",
-    photo: "https://media.licdn.com/dms/image/v2/C4E03AQGlbJ8VM5MzXQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662469087103?e=1755734400&v=beta&t=x3HhrN7EvUUVIVh-14PT_L2s7Z5xT8tGMvGvlUtdmZY"
+    photo: "https://media.licdn.com/dms/image/v2/C4E03AQGlbJ8VM5MzXQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1662469087103?e=2147483647&v=beta&t=DxKKtFtDpgEMdbf9BhjRtXPaVnuZcUogi9Kmkc0QnmI"
   },
   about: "Récemment diplômé à l'EPITA , je suis à la recherche d'un poste dans le domaine du Machine Learning, du DataEngineering ou du Devops",
   skills: ["Python",
